@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif; /* Adiciona uma fonte mais agradável */
+    background-image: url("imagens/fundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333; /* Altera a cor do título */
+    font-family: "Zen Tokyo Zoo", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    color: white;
+    background-color:#003229;
+    border-radius: 8px;
+    height: 55px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+    position: relative;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+.card {
+    background-color: #009688;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    overflow: hidden; /* Para esconder as partes que saem do cartão */
+    position: relative; /* Para permitir posicionamento de elementos internos */
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+    display: none; /* Esconde a imagem inicialmente */
+}
+
+.card.flipped img {
+    display: block; /* Mostra a imagem quando virada */
+}
+
+/* Estilo do botão */
+button {
+    margin-top: 20px; /* Espaçamento acima do botão */
+    padding: 10px 20px; /* Adiciona padding ao botão */
+    background-color:#003229; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Altera o cursor ao passar o mouse */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s; 
+    position: relative;
+    width: 350px;
+    left: 120px;
+    top: 25px;
+}
+
+button:hover {
+    background-color: #004d40; /* Cor de fundo ao passar o mouse */
+}
+
+button:focus {
+    outline: none; /* Remove a borda de foco */
+}
+#winnerMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 3rem;
+    z-index: 100;
+}
